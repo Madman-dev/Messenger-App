@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		BD523E2629C8AC28006174CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523E2529C8AC28006174CA /* AppDelegate.swift */; };
 		BD523E2829C8AC28006174CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523E2729C8AC28006174CA /* SceneDelegate.swift */; };
-		BD523E2A29C8AC28006174CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523E2929C8AC28006174CA /* ViewController.swift */; };
+		BD523E2A29C8AC28006174CA /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523E2929C8AC28006174CA /* ConversationViewController.swift */; };
 		BD523E2D29C8AC28006174CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD523E2B29C8AC28006174CA /* Main.storyboard */; };
 		BD523E2F29C8AC2A006174CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD523E2E29C8AC2A006174CA /* Assets.xcassets */; };
 		BD523E3229C8AC2A006174CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD523E3029C8AC2A006174CA /* LaunchScreen.storyboard */; };
+		BD5D374F29C8B4A700E49A09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D374E29C8B4A700E49A09 /* LoginViewController.swift */; };
+		BD5D375129C8B4B700E49A09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D375029C8B4B700E49A09 /* RegisterViewController.swift */; };
+		BD5D375329C8B4FC00E49A09 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D375229C8B4FC00E49A09 /* PhotoViewerViewController.swift */; };
+		BD5D375529C8B50900E49A09 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D375429C8B50900E49A09 /* VideoPlayerViewController.swift */; };
+		BD5D375729C8B52C00E49A09 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D375629C8B52C00E49A09 /* NewConversationViewController.swift */; };
+		BD5D375929C8B54500E49A09 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D375829C8B54500E49A09 /* ProfileViewController.swift */; };
+		FBCFC099748FC696A2FB652E /* Pods_Messenger_Prototypr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A464A248FF3FBC2C55B70C23 /* Pods_Messenger_Prototypr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70E1789B3CE4EB94562E9A6B /* Pods-Messenger Prototypr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger Prototypr.debug.xcconfig"; path = "Target Support Files/Pods-Messenger Prototypr/Pods-Messenger Prototypr.debug.xcconfig"; sourceTree = "<group>"; };
+		A464A248FF3FBC2C55B70C23 /* Pods_Messenger_Prototypr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger_Prototypr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD523E2229C8AC28006174CA /* Messenger Prototypr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Messenger Prototypr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD523E2529C8AC28006174CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD523E2729C8AC28006174CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD523E2929C8AC28006174CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD523E2929C8AC28006174CA /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		BD523E2C29C8AC28006174CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD523E2E29C8AC2A006174CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD523E3129C8AC2A006174CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD523E3329C8AC2A006174CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD5D374E29C8B4A700E49A09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BD5D375029C8B4B700E49A09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BD5D375229C8B4FC00E49A09 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		BD5D375429C8B50900E49A09 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		BD5D375629C8B52C00E49A09 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		BD5D375829C8B54500E49A09 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EAEE3B355A16F4EF877EBE55 /* Pods-Messenger Prototypr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger Prototypr.release.xcconfig"; path = "Target Support Files/Pods-Messenger Prototypr/Pods-Messenger Prototypr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCFC099748FC696A2FB652E /* Pods_Messenger_Prototypr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AF1F03891A455415466C9BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70E1789B3CE4EB94562E9A6B /* Pods-Messenger Prototypr.debug.xcconfig */,
+				EAEE3B355A16F4EF877EBE55 /* Pods-Messenger Prototypr.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AE01A5F61AE9643A7B8F397 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A464A248FF3FBC2C55B70C23 /* Pods_Messenger_Prototypr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD523E1929C8AC28006174CA = {
 			isa = PBXGroup;
 			children = (
+				BD5D374829C8B33900E49A09 /* Controllers */,
+				BD5D374A29C8B34800E49A09 /* Models */,
+				BD5D374B29C8B34E00E49A09 /* ViewModels */,
+				BD5D374929C8B34200E49A09 /* Views */,
+				BD5D374C29C8B35A00E49A09 /* Resources */,
 				BD523E2429C8AC28006174CA /* Messenger Prototypr */,
 				BD523E2329C8AC28006174CA /* Products */,
+				7AF1F03891A455415466C9BF /* Pods */,
+				8AE01A5F61AE9643A7B8F397 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +97,64 @@
 		BD523E2429C8AC28006174CA /* Messenger Prototypr */ = {
 			isa = PBXGroup;
 			children = (
-				BD523E2529C8AC28006174CA /* AppDelegate.swift */,
-				BD523E2729C8AC28006174CA /* SceneDelegate.swift */,
-				BD523E2929C8AC28006174CA /* ViewController.swift */,
-				BD523E2B29C8AC28006174CA /* Main.storyboard */,
-				BD523E2E29C8AC2A006174CA /* Assets.xcassets */,
-				BD523E3029C8AC2A006174CA /* LaunchScreen.storyboard */,
 				BD523E3329C8AC2A006174CA /* Info.plist */,
 			);
 			path = "Messenger Prototypr";
+			sourceTree = "<group>";
+		};
+		BD5D374829C8B33900E49A09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD523E2929C8AC28006174CA /* ConversationViewController.swift */,
+				BD5D374E29C8B4A700E49A09 /* LoginViewController.swift */,
+				BD5D375029C8B4B700E49A09 /* RegisterViewController.swift */,
+				BD5D375229C8B4FC00E49A09 /* PhotoViewerViewController.swift */,
+				BD5D375429C8B50900E49A09 /* VideoPlayerViewController.swift */,
+				BD5D375629C8B52C00E49A09 /* NewConversationViewController.swift */,
+				BD5D375829C8B54500E49A09 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD5D374929C8B34200E49A09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD5D374D29C8B3AC00E49A09 /* Storyboards */,
+				BD523E2E29C8AC2A006174CA /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD5D374A29C8B34800E49A09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD5D374B29C8B34E00E49A09 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BD5D374C29C8B35A00E49A09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD523E2529C8AC28006174CA /* AppDelegate.swift */,
+				BD523E2729C8AC28006174CA /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD5D374D29C8B3AC00E49A09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD523E2B29C8AC28006174CA /* Main.storyboard */,
+				BD523E3029C8AC2A006174CA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD523E3629C8AC2A006174CA /* Build configuration list for PBXNativeTarget "Messenger Prototypr" */;
 			buildPhases = (
+				BA84995758E7D07EE816E706 /* [CP] Check Pods Manifest.lock */,
 				BD523E1E29C8AC28006174CA /* Sources */,
 				BD523E1F29C8AC28006174CA /* Frameworks */,
 				BD523E2029C8AC28006174CA /* Resources */,
@@ -133,14 +224,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BA84995758E7D07EE816E706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Messenger Prototypr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD523E1E29C8AC28006174CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD523E2A29C8AC28006174CA /* ViewController.swift in Sources */,
+				BD5D374F29C8B4A700E49A09 /* LoginViewController.swift in Sources */,
+				BD5D375129C8B4B700E49A09 /* RegisterViewController.swift in Sources */,
+				BD5D375729C8B52C00E49A09 /* NewConversationViewController.swift in Sources */,
+				BD523E2A29C8AC28006174CA /* ConversationViewController.swift in Sources */,
+				BD5D375529C8B50900E49A09 /* VideoPlayerViewController.swift in Sources */,
 				BD523E2629C8AC28006174CA /* AppDelegate.swift in Sources */,
+				BD5D375929C8B54500E49A09 /* ProfileViewController.swift in Sources */,
 				BD523E2829C8AC28006174CA /* SceneDelegate.swift in Sources */,
+				BD5D375329C8B4FC00E49A09 /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +404,7 @@
 		};
 		BD523E3729C8AC2A006174CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70E1789B3CE4EB94562E9A6B /* Pods-Messenger Prototypr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,8 +416,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +434,7 @@
 		};
 		BD523E3829C8AC2A006174CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAEE3B355A16F4EF877EBE55 /* Pods-Messenger Prototypr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,8 +446,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
