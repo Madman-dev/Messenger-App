@@ -75,12 +75,15 @@ class RegisterViewController: UIViewController {
     }()
     
     
-    /// 로고 삽입
+    /// 프로필 기본 이미지 삽입
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.clear.cgColor
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -91,10 +94,10 @@ class RegisterViewController: UIViewController {
         view.backgroundColor = .white
         
         //초기 화면 버튼 추가 >> 이건 왜 필요한걸까? 🙋🏻‍♂️ >> Register 창에 들어온 이상 필요없다 - ok
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
-//                                                            style: .done,
-//                                                            target: self,
-//                                                            action: #selector(didTapRight))
+        //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
+        //                                                            style: .done,
+        //                                                            target: self,
+        //                                                            action: #selector(didTapRight))
         
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
@@ -122,6 +125,7 @@ class RegisterViewController: UIViewController {
     @objc func didTapChangeProfilePicture() {
         /// 위에 선언한 numberOfTouchesRequired가 호출되고 실행하는 코드 구성
         print("\(#function)이 호출되었습니다")
+        presentPhotoActionSheet()
     }
     
     
@@ -135,11 +139,13 @@ class RegisterViewController: UIViewController {
                                  y: 20,
                                  width: size,
                                  height: size)
-
+        
+        imageView.layer.cornerRadius = imageView.width/2.0
+        
         fullNameField.frame = CGRect(x: 30,
-                                  y: imageView.bottom+10,
-                                  width: scrollView.width-60,
-                                  height: 52)
+                                     y: imageView.bottom+10,
+                                     width: scrollView.width-60,
+                                     height: 52)
         
         emailField.frame = CGRect(x: 30,
                                   y: fullNameField.bottom+10,
@@ -152,9 +158,9 @@ class RegisterViewController: UIViewController {
                                      height: 52)
         
         registerButton.frame = CGRect(x: 30,
-                                   y: passwordField.bottom+10,
-                                   width: scrollView.width-60,
-                                   height: 52)
+                                      y: passwordField.bottom+10,
+                                      width: scrollView.width-60,
+                                      height: 52)
     }
     
     
@@ -179,7 +185,7 @@ class RegisterViewController: UIViewController {
     
     func alertUserLoginError() {
         print("\(#function)이 호출되었습니다")
-
+        
         let alert = UIAlertController(title: "앗!",
                                       message: "새로운 계정을 위해 모든 정보를 입력해주세요",
                                       preferredStyle: .alert)
@@ -192,13 +198,13 @@ class RegisterViewController: UIViewController {
     
     
     /// register 영역에서는 필요 없는 코드
-//    @objc private func didTapRight() {
-//        print("\(#function)이 호출되었습니다")
-//
-//        let vc = RegisterViewController()
-//        vc.title = "Create Account"
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    //    @objc private func didTapRight() {
+    //        print("\(#function)이 호출되었습니다")
+    //
+    //        let vc = RegisterViewController()
+    //        vc.title = "Create Account"
+    //        navigationController?.pushViewController(vc, animated: true)
+    //    }
 }
 
 
@@ -214,9 +220,78 @@ extension RegisterViewController: UITextFieldDelegate {
     }
 }
 
+/// ⭐️ This allows users to get results of user taking picture or photo from camera roll
+/// ++ UINavigationControllerDelegate는 UIImagePickerControllerDelegate와 함께 움직인다!
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    /// 🙋🏻‍♂️ actionSheet만 구현하면 어플은 우리 사진첩의 권한을 가져가는건가?
+    /// 그냥 안내창 역할만하는거 아니야?
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "프로필 사진",
+                                            message: "",
+                                            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "취소",
+                                            style: .cancel,
+                                            handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "사진 촬영",
+                                            style: .default,
+                                            /// weak self to avoid memory retention loop
+                                            handler: { [weak self] _ in self?.presentCamera()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "사진 선택",
+                                            style: .default,
+                                            /// weak self to avoid memory retention loop
+                                            handler: { [weak self] _ in self?.presentPhotoPicker()
+        }))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    
+    /// to keep the code modular - created 2 func below
+    func presentCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.delegate = self
+        vc.allowsEditing = true /// 사진을 선택하면 편집 가능
+        present(vc, animated: true) /// 화면 출력
+        //        return vc
+    }
+    
+    func presentPhotoPicker() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+    /// take photo or selects one
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        // print(info)
+        /// ⬇ 선택된 사진의 값을 고를 수 있도록
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+                                                                                    else { return }
+        self.imageView.image = selectedImage  /// 아직 selectedImage는 선택되지 않음
+        
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+}
+
+
 
 /* 이번 화면을 구현하면서 배운 점 ====================================================================
-1. isUserInteractionEnabled
-2. UITapGestureRecognizer
+ 1. isUserInteractionEnabled
+ 2. UITapGestureRecognizer
  
+ 3. info update
+ 4. presentPhotoActionSheet - action Sheet이라는게 우리가 흔히 선택하는 창을 뜻하는거였구나~
+ 5. UIImagePickerControllerDelegate
  ================================================================================================ */
